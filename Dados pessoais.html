@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de Novo Usuário</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg"></div>
+  <div class="embers" id="embers"></div>
+
+  <main class="card">
+    <h1 id="formTitle">Cadastro de Novo Usuário</h1>
+    <p class="kicker">Dados Pessoais:</p>
+    <p class="sub" id="formSub">Preencha os campos abaixo com as informações do anime. Campos marcados com <span class="required">*</span> são obrigatórios.</p>
+
+    <div class="banner error" id="formBanner">
+      <span class="mark">⚠</span>
+      <span id="formBannerText">Corrija os campos destacados antes de continuar.</span>
+    </div>
+
+    <form id="animeForm" novalidate>
+      <div class="field" id="field-titulo">
+        <label for="titulo">Nome: <span class="required">*</span></label>
+        <input type="text" id="titulo" name="titulo" placeholder="Seu Nome...">
+        <span class="error-msg">Digite Seu Nome </span>
+      </div>
+
+        <div class="field" id="field-ano">
+          <label for="ano">Documento: <span class="required">*</span></label>
+          <input type="number" id="Documento" name="Documento" placeholder="Seu Documento...">
+          <span class="error-msg">Informe Seu CPF/CNPJ </span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field" id="field-estudio">
+          <label for="estudio">E-mail: <span class="required">*</span></label>
+          <input type="text" id="E-mail" name="E-mail" placeholder="Seu E-mail">
+          <span class="error-msg">Informe Seu E-mail </span>
+        </div>
+
+        <div class="field" id="field-episodios">
+          <label for="episodios">Empresa: <span class="required">*</span></label>
+          <input type="text" id="Empresa" name="Empresa" placeholder="Ex: Senac">
+          <span class="error-msg">Informe nome de uma empresa válida</span>
+        </div>
+      </div>
+
+      <div class="field" id="field-sinopse">
+        <label for="sinopse">Telefone: <span class="required">*</span></label>
+        <input type="number"  id="Telefone" name="Telefone" placeholder="Seu Telefone..."></textarea>
+        <span class="error-msg">Insira um Número válido</span>
+      </div>
+
+      <div class="checkbox-termos">
+                <input type="checkbox" id="termos">
+                <label for="termos">já sou cliente da LDSOFT</label>
+            </div>
+
+    <div class="success-panel" id="successPanel">
+      <div class="banner success visible">
+        <span class="mark">✓</span>
+        <span>Dados salvo com sucesso!</span>
+      
+       <div class="modal-botoes">
+                <button class="botao-conta" id="btnSalvarPerfil" type="button" style="width:auto; padding:10px 24px;">Salvar</button>
+       </div>  
+       <div>   
+             <br> <br> <br> <br>
+
+            <button type="button" onClick="validar()">Acessar</button>
+            <br>
+          
+        </form>
+
+            
+       </div>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
